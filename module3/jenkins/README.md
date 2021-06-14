@@ -3,6 +3,9 @@
 ### Patch OS and yum packages
 ```bash
 $ yum update -y
+$ yum install git telnet -y
+$ amazon-linux-extras enable python3.8
+$ yum intall python3.8
 ```
 
 ### Install Jenkins
@@ -27,3 +30,36 @@ $ systemctl status jenkins
 * Get initial admin password
 * Install suggested plugins
 * Create First admin user (admin/test1234)
+* Update jenkins user shell to /bin/bash
+
+### Generate ssh key pair for Github
+```bash
+$ ssh-keygen
+
+```
+
+### Create ubsdemo Python fastapi app
+```bash
+$ cd /Users/txu/code/ubs/devops101/module3/terraform/github
+$ terraform plan
+$ terraform apply
+```
+
+### Jenkins job configuration
+```bash
+# Create Python venv
+python3.8 -m venv venv
+
+# Initialize Python venv
+source venv/bin/activate
+
+# Upgrade pip
+pip install -U pip
+
+# Install required packages
+pip install -r requirements.txt
+
+# Run test
+export PYTHONPATH="./app"
+python -m unittest
+```

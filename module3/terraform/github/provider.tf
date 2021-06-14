@@ -18,5 +18,6 @@ provider "aws" {
 
 # Configure the Github provider
 provider "github" {
+  owner = "tomosolutions"
   token = "${data.aws_ssm_parameter.github_personal_token.value}"
 }
