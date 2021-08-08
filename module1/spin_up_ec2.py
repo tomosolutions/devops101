@@ -71,12 +71,12 @@ if __name__ == '__main__':
     print(f'New instance id is {instance_id}')
 
     print('Sleep for 60 seconds')
-    time.sleep(60)
+    time.sleep(300)
 
     # Terminate given EC2 instance
-    # instance_ids = []
-    # instance_ids.append('i-09120679706df1e6f')
-    # response = terminate_ec2_instance(session, instance_ids)
-    # if response['ResponseMetadata']['HTTPStatusCode'] == 200:
-    #     print(f'Terminate {instance_ids} successful!')
-    #     pprint.pprint(response['TerminatingInstances'])
+    instance_ids = []
+    instance_ids.append(instance_id)
+    response = terminate_ec2_instance(session, instance_ids)
+    if response['ResponseMetadata']['HTTPStatusCode'] == 200:
+        print(f'Terminate {instance_ids} successful!')
+        pprint.pprint(response['TerminatingInstances'])
