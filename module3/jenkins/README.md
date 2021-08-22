@@ -5,7 +5,7 @@
 $ yum update -y
 $ yum install git telnet -y
 $ amazon-linux-extras enable python3.8
-$ yum intall python3.8
+$ yum install python3.8
 ```
 
 ### Install Jenkins
