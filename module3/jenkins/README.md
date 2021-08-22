@@ -2,10 +2,10 @@
 
 ### Patch OS and yum packages
 ```bash
-$ yum update -y
-$ yum install git telnet -y
-$ amazon-linux-extras enable python3.8
-$ yum install python3.8
+$ sudo yum update -y
+$ sudo yum install git telnet -y
+$ sudo amazon-linux-extras enable python3.8
+$ sudo yum install python3.8
 ```
 
 ### Install Jenkins
