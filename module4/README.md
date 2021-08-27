@@ -1,3 +1,8 @@
+### Add user to Docker group
+```bash
+$ usermod -a -G docker ec2-user
+```
+
 ### To Build a local image
 ```bash
 # Go into the folder that contains a Dockerfile
