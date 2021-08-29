@@ -1,0 +1,8 @@
+### Switch to Flask-XML-RPC dependency
+
+### Change Request: PBX-2222
+
+### Summary
+The Flask-XML-RPC-Re fork has Python 3 support, but it has a couple of other
+problems:
+* test suite does not passlatest code is not taggeduncompiled source code is not distributed via PyPIThe Flask-XML-RPC module is essentially dead upstream, but it ispackaged in EPEL 7 and Fedora. This module will get us far enough tothepoint that we can complete phase one for this project.When we care about Python 3, we can drop XML-RPC entirely and get theservice consumers to switch to a REST API instead.(Note, with this change, the Travis CI tests will fail for Python 3.Thesolution is to drop XML-RPC support.)
