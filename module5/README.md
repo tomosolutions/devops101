@@ -1,3 +1,6 @@
+### Note
+Please do the following on your EC2 instance.
+
 ### Install kubectl 1.21
 ```bash
 $ pwd
