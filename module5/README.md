@@ -74,6 +74,9 @@ $ eksctl get cluster
 2021-08-29 19:09:17 [ℹ]  using region us-east-1
 NAME		REGION		EKSCTL CREATED
 dev-cluster	us-east-1	True
+
+# To scale nodegroup from 1 node to 2
+$ eksctl scale nodegroup --cluster dev-cluster standard-workers --nodes 2 --nodes-min 2 --nodes-max 4
 ```
 
 ### Configure kubectl
